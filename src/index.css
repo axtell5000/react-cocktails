@@ -30,20 +30,20 @@ Global Styles
 ======
 */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: var(--mainBlack);
   background: var(--mainBackground);
-  line-height: 1.4;
+  color: var(--mainBlack);  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 1.4;
 }
+
 h1,
 h2,
 h3,
@@ -51,22 +51,27 @@ h4,
 h5,
 h6 {
   font-family: var(--slantedFont);
-  margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+  
 }
+
 p {
   margin-bottom: 1.25rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
-  text-decoration: none;
   color: var(--mainBlack);
+  text-decoration: none;  
 }
+
 img {
-  width: 100%;
   display: block;
+  width: 100%;  
 }
 
 /* 
@@ -76,92 +81,104 @@ Buttons
 */
 .btn,
 .btn-white,
-.btn-primary {
-  text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
-  display: inline-block;
-  transition: var(--mainTransition);
-  cursor: pointer;
-  font-size: 0.8rem;
+.btn-primary {  
   background: transparent;
+  border: 2px solid var(--primaryColor);
   border-radius: var(--mainBorderRadius);
+  color: var(--primaryColor);
+  cursor: pointer;
   display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: var(--mainSpacing);
+  padding: 0.45rem 0.8rem;
+  text-transform: uppercase;
+  transition: var(--mainTransition);
 }
+
 .btn:hover {
   background: var(--primaryColor);
   color: var(--mainWhite);
 }
+
 .btn-white {
   background: transparent;
-  color: var(--mainWhite);
   border-color: var(--mainWhite);
+  color: var(--mainWhite);  
 }
+
 .btn-white:hover {
   background: var(--mainWhite);
   color: var(--primaryColor);
 }
+
 .btn-primary {
   background: var(--primaryColor);
-  color: var(--mainWhite);
   border-color: transparent;
+  color: var(--mainWhite);  
 }
+
 .btn-primary:hover {
   background: var(--primaryLightColor);
   color: var(--primaryColor);
 }
+
 .btn-block {
-  width: 100%;
+  box-shadow: var(--lightShadow);  
   display: block;
-  margin: 0 auto;
-  box-shadow: var(--lightShadow);
+  margin: 0 auto;  
   text-align: center;
+  width: 100%;
 }
+
 .btn-details {
   padding: 0.25rem 0.4rem;
 }
+
 .btn-details:hover {
   background: var(--primaryLightColor);
   border-color: var(--primaryLightColor);
 }
+
 /* 
 ====== 
 Navbar
 ======
 */
+
 .navbar {
-  background: var(--mainWhite);
-  height: 5rem;
-  display: flex;
   align-items: center;
+  background: var(--mainWhite);
   border-bottom: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
-}
-.nav-center {
   display: flex;
-  justify-content: space-between;
+  height: 5rem;
+}
+
+.nav-center {
   align-items: center;
-  width: var(--smallWidth);
+  display: flex;
+  justify-content: space-between;  
   margin: 0 auto;
   max-width: var(--fullWidth);
+  width: var(--smallWidth);
 }
+
 .nav-links {
-  display: flex;
   align-items: center;
+  display: flex;  
 }
-.nav-links a {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
+
+.nav-links a {  
+  display: inline-block;  
   font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 0.5rem;  
   padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
   transition: var(--mainTransition);
 }
+
 .nav-links a:hover {
   color: var(--primaryColor);
 }
@@ -174,15 +191,17 @@ About
 ======
 */
 .about-section {
-  width: var(--smallWidth);
-  max-width: var(--maxWidth);
   margin: 0 auto;
+  max-width: var(--maxWidth);  
+  width: var(--smallWidth);
 }
+
 .about-section p {
-  line-height: 2rem;
   font-weight: 400;
   letter-spacing: 2px;
+  line-height: 2rem;
 }
+
 /* 
 ====== 
 Error
@@ -192,6 +211,7 @@ Error
   display: flex;
   justify-content: center;
 }
+
 .error-container {
   text-align: center;
   text-transform: capitalize;
@@ -205,23 +225,25 @@ Cocktails List
 .section {
   padding: 5rem 0;
 }
+
 .section-title {
   font-size: 2rem;
-  text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  margin: 1rem 0 3.5rem 0;
   text-align: center;
-  margin-bottom: 3.5rem;
-  margin-top: 1rem;
+  text-transform: capitalize;
 }
+
 .cocktails-center {
-  width: var(--smallWidth);
+  display: grid;
+  column-gap: 2rem;
   margin: 0 auto;
   max-width: var(--fullWidth);
-  display: grid;
-  row-gap: 2rem;
-  column-gap: 2rem;
+  row-gap: 2rem;  
+  width: var(--smallWidth);
   /* align-items: start; */
 }
+
 @media screen and (min-width: 576px) {
   .cocktails-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
@@ -235,74 +257,85 @@ Cocktail
 
 .cocktail {
   background: var(--mainWhite);
-  margin-bottom: 2rem;
+  border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
   display: grid;
   grid-template-rows: auto 1fr;
-  border-radius: var(--mainBorderRadius);
+  margin-bottom: 2rem;  
+  transition: var(--mainTransition); 
 }
+
 .cocktail:hover {
   box-shadow: var(--darkShadow);
 }
+
 .cocktail img {
-  height: 20rem;
-  object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
+  height: 20rem;
+  object-fit: cover;
 }
+
 .cocktail-footer {
   padding: 1.5rem;
 }
+
 .cocktail-footer h3,
 .cocktail-footer h4,
 .cocktail-footer p {
   margin-bottom: 0.3rem;
 }
+
 .cocktail-footer h3 {
   font-size: 2rem;
 }
+
 .cocktail-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
+
 /* 
 ====== 
 Form
 ======
 */
+
 .search {
   margin-top: 1rem;
   padding-bottom: 0;
 }
 
 .search-form {
-  width: var(--smallWidth);
-  margin: 0 auto;
-  max-width: var(--maxWidth);
   background: var(--mainWhite);
+  border-radius: var(--mainBorderRadius);
+  box-shadow: var(--lightShadow);  
+  margin: 0 auto;
+  max-width: var(--maxWidth);  
   padding: 2rem 2.5rem;
   text-transform: capitalize;
-  border-radius: var(--mainBorderRadius);
-  box-shadow: var(--lightShadow);
+  width: var(--smallWidth);
 }
 
 .form-control label {
-  display: block;
-  margin-bottom: 1.25rem;
+  color: var(--primaryColor);
+  display: block;  
   font-weight: bold;
   letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  margin-bottom: 1.25rem;
 }
-.form-control input {
-  width: 100%;
-  border: none;
-  border-color: transparent;
+
+.form-control input {  
   background: var(--mainBackground);
+  border: none;
+  border-color: transparent;  
   border-radius: var(--mainBorderRadius);
-  padding: 0.5rem;
   font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 100%;
+  
 }
+
 /* 
 ====== 
 Cocktail
@@ -312,79 +345,92 @@ Cocktail
 .cocktail-section {
   text-align: center;
 }
-.drink {
-  width: var(--smallWidth);
-  max-width: var(--fullWidth);
+
+.drink {  
   margin: 0 auto;
+  max-width: var(--fullWidth);  
   text-align: left;
+  width: var(--smallWidth);
 }
+
 .drink img {
   border-radius: var(--mainBorderRadius);
 }
+
 .drink p {
   font-weight: bold;
-  text-transform: capitalize;
   line-height: 1.8;
+  text-transform: capitalize;  
 }
+
 .drink span {
   margin-right: 0.5rem;
 }
+
 .drink-data {
   background: var(--primaryLightColor);
-  padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
+  padding: 0.25rem 0.5rem;
 }
+
 .drink-info {
   padding-top: 2rem;
 }
+
 @media screen and (min-width: 992px) {
   .drink {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3rem;
     align-items: center;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 2fr 3fr;
   }
+
   .drink-info {
     padding-top: 0;
   }
 }
+
 .loader,
 .loader:before,
-.loader:after {
-  background: transparent;
-  -webkit-animation: load1 1s infinite ease-in-out;
+.loader:after {  
   animation: load1 1s infinite ease-in-out;
-  width: 1em;
+  background: transparent;
   height: 4em;
+  width: 1em;  
+  -webkit-animation: load1 1s infinite ease-in-out;
 }
+
 .loader {
+  animation-delay: -0.16s;
   color: var(--primaryColor);
-  text-indent: -9999em;
-  margin: 88px auto;
-  margin-top: 20rem;
+  font-size: 3rem;  
+  margin: 20rem auto 0 auto;  
   position: relative;
-  font-size: 3rem;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
+  text-indent: -9999em;
   transform: translateZ(0);
   -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
 }
+
 .loader:before,
 .loader:after {
-  position: absolute;
-  top: 0;
   content: '';
+  position: absolute;
+  top: 0;  
 }
+
 .loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;  
 }
+
 .loader:after {
   left: 1.5em;
 }
+
 @-webkit-keyframes load1 {
   0%,
   80%,
@@ -397,6 +443,7 @@ Cocktail
     height: 5em;
   }
 }
+
 @keyframes load1 {
   0%,
   80%,
@@ -404,6 +451,7 @@ Cocktail
     box-shadow: 0 0;
     height: 4em;
   }
+
   40% {
     box-shadow: 0 -2em;
     height: 5em;
